@@ -1,9 +1,0 @@
-# robotparse config for the KUKA demo
-direction_axis: x            # KUKA tools point along +X
-tools:
-  1: {xyz: [150, 0, 0], abc: [0, 0, 0]}   # TOOL_DATA[1] "torch": 150 mm along the flange X axis
-robot:
-  urdf: ../urdf/kr6_r900.urdf
-  tip_link: flange           # KUKA flange frame (X out)
-  initial_joints: [0, -90, 90, 0, 0, 0]
-output_tool: 1               # always report the torch TCP (PTP HOME folds switch to tool 0)

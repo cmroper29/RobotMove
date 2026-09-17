@@ -1,7 +1,0 @@
-# robotparse config for the ABB demo (tool data and work objects come from the program)
-direction_axis: z
-robot:
-  urdf: ../urdf/kr6_r900.urdf
-  tip_link: tool0            # flange frame with Z out, as ABB tool0
-# The program switches between tool0 (MoveAbsJ home) and tTorch. Report the torch TCP throughout:
-output_tool: {xyz: [0, 0, 150], quat: [1, 0, 0, 0]}
