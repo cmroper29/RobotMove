@@ -1,0 +1,15 @@
+# robotparse config for the FANUC demo
+direction_axis: z
+bases:                                    # UFRAME n
+  1: {xyz: [400, 0, 0], wpr: [0, 0, 0]}
+tools:                                    # UTOOL n
+  1: {xyz: [0, 0, 150], wpr: [0, 0, 0]}
+fanuc:
+  position_registers:
+    1: {xyz: [0, 0, 100], wpr: [0, 0, 0]}   # lift offset
+    2: {xyz: [0, -75, 0], wpr: [0, 0, 0]}   # incremented inside the FOR loop
+motion:
+  fanuc_cnt_time: 0.25
+robot:
+  urdf: ../urdf/kr6_r900.urdf
+  tip_link: tool0
